@@ -1,0 +1,129 @@
+# 🔐 Crypto + Signing
+cryptography==42.0.5
+pyjwt[crypto]==2.8.0
+
+# 🧪 Validation
+pydantic==2.7.1
+
+# 🧬 Environment management
+python-dotenv==1.0.1
+
+# ⚡ HTTP client for agents (e.g. Apple ID, APIs)
+httpx==0.27.0
+
+# 🛠️ CLI + scripting
+argparse==1.4.0
+
+# 🔢 Data Science & Numeric Computing
+numpy==1.24.3
+pandas==2.0.3
+
+# 📧 Email Services
+mailjet-rest==1.3.4
+
+# 🤖 Advanced AI & LangChain
+langchain==0.2.6
+langchain-google-genai==1.0.6
+langgraph==0.1.5
+
+# 📄 PDF Processing
+PyPDF2==3.0.1
+pypdf>=4.0.1
+
+# 📊 Research & Data Feeds
+feedparser==6.0.10
+
+# 🧪 Testing
+pytest==8.2.2
+pytest-cov==5.0.0
+
+# 🌐 Web API Server
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+
+# 🤖 AI & Machine Learning
+google-generativeai==0.8.1
+
+# 📧 Email & Calendar
+google-auth==2.29.0
+google-auth-oauthlib==1.2.0
+google-auth-httplib2==0.2.0
+google-api-python-client==2.137.0
+
+# 🌐 Web scraping & HTML parsing
+beautifulsoup4==4.12.3
+lxml==5.2.2
+
+# 📦 HTTP requests
+requests==2.32.3
+
+# 📁 File handling
+aiofiles>=23.2.1
+python-multipart>=0.0.6
+
+# 📊 Excel file processing
+openpyxl>=3.1.0
+
+# 🔐 JWT and authentication
+python-jose[cryptography]>=3.3.0
+
+# Research Agent Requirements
+arxiv>=2.1.3
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+typing-extensions>=4.8.0
+
+# Additional dependencies for comprehensive functionality
+pathlib2>=2.3.7  # Enhanced path handling
+email-validator>=2.0.0  # Email validation
+Pillow>=10.0.0  # Image processing for email attachments
+chardet>=5.2.0  # Character encoding detection
+cssselect>=1.2.0  # CSS selector support for BeautifulSoup
+html5lib>=1.1  # HTML parser for BeautifulSoup
+python-magic>=0.4.27  # File type detection
+validators>=0.22.0  # URL and data validation
+python-dateutil>=2.8.2  # Date parsing utilities
+pytz>=2023.3  # Timezone handling
+backoff>=2.2.1  # Retry with exponential backoff
+
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+httpx==0.25.2
+python-multipart==0.0.6
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-dotenv==1.0.0
+sqlalchemy==2.0.23
+alembic==1.13.0
+psycopg2-binary==2.9.9
+redis==5.0.1
+celery==5.3.4
+pytest==7.4.3
+pytest-asyncio==0.21.1
+google-auth==2.23.4
+google-auth-oauthlib==1.1.0
+google-auth-httplib2==0.1.1
+google-api-python-client==2.108.0
+openai==1.3.7
+anthropic==0.7.7
+mailjet-rest==1.3.4
+fastapi
+uvicorn
+python-dotenv
+numpy
+python-multipart
+aiofiles
+google-generativeai
+google-cloud
+google-auth
+google-api-python-client
+pandas
+langgraph
+langchain_google_genai
+cryptography
+openpyxl
+feedparser
+PyPDF2
+pypdf
+beautifulsoup4

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Connection Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        button { padding: 10px 20px; margin: 10px; background: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .result { margin: 10px 0; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background: #f9f9f9; }
+        .success { border-color: #28a745; background: #d4edda; }
+        .error { border-color: #dc3545; background: #f8d7da; }
+    </style>
+</head>
+<body>
+    <h1>Frontend-Backend Connection Test</h1>
+    
+    <button onclick="testHealth()">Test Health Endpoint</button>
+    <button onclick="testChatAgent()">Test Chat Agent</button>
+    <button onclick="testResearchAgent()">Test Research Agent</button>
+    
+    <div id="results"></div>
+
+    <script>
+        const API_BASE = 'http://127.0.0.1:8001';
+        
+        function addResult(test, success, data) {
+            const results = document.getElementById('results');
+            const div = document.createElement('div');
+            div.className = `result ${success ? 'success' : 'error'}`;
+            div.innerHTML = `
+                <h3>${test}</h3>
+                <p><strong>Status:</strong> ${success ? '✅ SUCCESS' : '❌ FAILED'}</p>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+            results.appendChild(div);
+        }
+        
+        async function testHealth() {
+            try {
+                const response = await fetch(`${API_BASE}/health`);
+                const data = await response.json();
+                addResult('Health Check', response.ok, data);
+            } catch (error) {
+                addResult('Health Check', false, { error: error.message });
+            }
+        }
+        
+        async function testChatAgent() {
+            try {
+                const response = await fetch(`${API_BASE}/agents/chat/status`);
+                const data = await response.json();
+                addResult('Chat Agent Status', response.ok, data);
+            } catch (error) {
+                addResult('Chat Agent Status', false, { error: error.message });
+            }
+        }
+        
+        async function testResearchAgent() {
+            try {
+                const response = await fetch(`${API_BASE}/agents/research/status`);
+                const data = await response.json();
+                addResult('Research Agent Status', response.ok, data);
+            } catch (error) {
+                addResult('Research Agent Status', false, { error: error.message });
+            }
+        }
+    </script>
+</body>
+</html>
