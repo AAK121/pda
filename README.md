@@ -7,7 +7,7 @@
 
 ### Inspiration 
 Imagine a future where AI agents work with **cryptographically enforced consent**, creating a new paradigm for trustworthy personal AI assistants. For millions seeking privacy-first technology, this is our daily mission.  
-**Hushh AI Agent Ecosystem** is an innovative  AI-powered solution designed to empower users with intelligent agents for email marketing, finance, research, calendar management, and relationship memory—all built on the HushhMCP (Micro Consent Protocol) foundation.
+**Hushh AI Agent Ecosystem** is an innovative  AI-powered solution designed to empower users with intelligent agents for email marketing, research, calendar management, and relationship memory—all built on the HushhMCP (Micro Consent Protocol) foundation.
 
 ### DEMO VIDEO:
 [Demonstration Video](https://drive.google.com/drive/folders/1RyGEkpi7KWCgS9ABf774KpVJNjQ8FRQ0?usp=sharing)
@@ -61,9 +61,6 @@ Our platform features 6 specialized AI agents working in harmony:
 #### 📧 [MailerPanda Agent](hushh_mcp/agents/mailerpanda/README.md)
 AI-powered email marketing with human oversight, personalized content generation, and approval workflows.
 
-#### 💰 [ChanduFinance Agent](hushh_mcp/agents/chandufinance/README.md) 
-Personal financial advisor with real-time market data, investment recommendations, and educational content.
-
 #### 🧠 [Relationship Memory Agent](hushh_mcp/agents/relationship_memory/README.md)
 Persistent context management and cross-agent memory sharing for enhanced personalization.
 
@@ -72,9 +69,6 @@ Intelligent calendar management with AI event extraction from emails and Google 
 
 #### 🔍 [Research Agent](hushh_mcp/agents/research_agent/README.md)
 Multi-source information gathering with academic papers, news feeds, and comprehensive analysis.
-
-#### 📨 [Basic Mailer Agent](hushh_mcp/agents/Mailer/README.md)
-Simple email sending service with Excel/CSV support and delivery tracking.
 
 ---
 
@@ -229,8 +223,8 @@ Modern AI systems often lack context about previous interactions, making convers
 
 `ash
 # Clone the repository
-git clone https://github.com/AAK121/Hushh_Hackathon_Team_Mailer.git
-cd Hushh_Hackathon_Team_Mailer
+git clone https://github.com/AAK121/pda.git
+cd pda
 
 # Create and activate virtual environment
 python -m venv .venv
@@ -241,6 +235,18 @@ source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Manual dependency installation (if pip doesn't install all dependencies)
+pip install fastapi uvicorn python-dotenv numpy
+pip install python-multipart aiofiles
+pip install google-generativeai google-cloud google-auth google-api-python-client
+pip install pandas
+pip install langgraph
+pip install langchain_google_genai
+pip install cryptography
+pip install openpyxl
+pip install feedparser
+pip install PyPDF2
 
 # Configure environment variables
 cp .env.example .env
@@ -254,8 +260,6 @@ GOOGLE_API_KEY=your_gemini_api_key
 MAILJET_API_KEY=your_mailjet_api_key
 MAILJET_API_SECRET=your_mailjet_secret
 ENCRYPTION_KEY=your_32_byte_hex_key
-MONGODB_URI=your_mongodb_connection_string
-REDIS_URL=your_redis_connection_string
 `
 
 ### **Frontend Setup**
