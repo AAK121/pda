@@ -6,7 +6,15 @@
 </div>
 
 ### Inspiration 
-Imagine a future where AI agents work with **cryptographically enforced consent**, creating a new paradigm for trustworthy personal AI assistants. For millions seeking privacy-first technology, this is our daily mission.  
+Imagine a future where AI agents work with **cryptographically enforced consent**, creating a new paradigm for trustworthy per### **Environment Configuration**
+`ash
+# Required Environment Variables
+GOOGLE_API_KEY=your_gemini_api_key
+MAILJET_API_KEY=your_mailjet_api_key
+MAILJET_API_SECRET=your_mailjet_secret
+ENCRYPTION_KEY=your_32_byte_hex_key
+SENDER_EMAIL=your_email@example.com  # Configure your email address for sending emails
+` assistants. For millions seeking privacy-first technology, this is our daily mission.  
 **Hushh AI Agent Ecosystem** is an innovative  AI-powered solution designed to empower users with intelligent agents for email marketing, research, calendar management, and relationship memory—all built on the HushhMCP (Micro Consent Protocol) foundation.
 
 ### DEMO VIDEO:
